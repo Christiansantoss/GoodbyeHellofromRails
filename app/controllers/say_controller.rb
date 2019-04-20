@@ -1,6 +1,6 @@
 class SayController < ApplicationController
   def hello
-    @time = Time.now
+    @time = Time.know #Changing our action method in the controller to set the time value into an instance variable called time
   end
 
   def goodbye

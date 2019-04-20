@@ -1,11 +1,24 @@
 <h1>Hello from rails!</h1>
 
 <p>
-It is now <%= @time %>
+It is now <%= @time %>  <!-- using the instance variable to substitute the time into the output !-->
 </p>
 
 <p>
-Say <a href="/say/goodbye">Goodbye</a>!
+Say <a href="/say/goodbye">Goodbye</a>!  <!-- Rails uses a convention to parse the url into a target controller and an action within that controller. Adopt standard Url convention for links !-->
 </p>
+
+<p>Time to say 
+<%= link_to "Goodbye", say_goodbye_path %>!
+</p> 
+
+<!-- 
+There’s a link_to() call within an ERB  sequence. This creates a link to
+a URL that will invoke the goodbye() action. The first parameter in the call to
+link_to() is the text to be displayed in the hyperlink, and the next parameter
+tells Rails to generate the link to the goodbye() action 
+!-->
+
+
 
 <p>Find me in app/views/say/hello.html.erb</p>
